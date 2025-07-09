@@ -54,3 +54,24 @@ body::after {
     transform: scale(1.25) perspective(1px);
   }
 }
+
+body,
+a,
+button {
+  cursor: none;
+}
+
+/* Gaya untuk elemen kursor kustom kita */
+.custom-cursor {
+  position: fixed; /* Tetap di layar saat scroll */
+  pointer-events: none; /* Agar tidak mengganggu klik pada elemen lain */
+  z-index: 9999;
+  transition: transform 0.2s ease-out, width 0.3s ease-out, height 0.3s ease-out;
+  will-change: transform, width, height;
+}
+
+/* Gaya tambahan saat cursor menyentuh elemen interaktif */
+.custom-cursor.grow {
+  background-color: transparent !important; /* Contoh: buat jadi transparan */
+  border: 2px solid white; /* Contoh: beri outline putih */
+}

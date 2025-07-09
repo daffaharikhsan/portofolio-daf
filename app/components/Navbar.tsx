@@ -1,40 +1,80 @@
 // src/components/Navbar.tsx
+"use client"; // <-- 1. Tambahkan ini untuk menjadikan komponen sebagai Client Component
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation"; // <-- 2. Impor hook usePathname
 
 const Navbar = () => {
+  const pathname = usePathname(); // <-- 3. Dapatkan path URL saat ini
+
   return (
     <nav className="w-full bg-white text-black py-4 px-8 md:px-16 lg:px-24">
       <div className="mx-auto flex justify-between items-center">
         {/* Logo atau Nama */}
         <Link href="/" className="flex items-center gap-[30px]">
-          <Image src="/assets/Logo.svg" alt="Logo" width={40} height={40} />
-          <div className="text-[30px]">
+          <Image
+            src="/assets/Logo.svg"
+            alt="Logo"
+            width={50}
+            height={50}
+            className="transition-transform duration-300 hover:scale-125"
+          />
+          <div className="text-[30px] text-black">
             <span className="font-bold">Daffa </span>
             <span className="font-light">Harikhsan</span>
           </div>
         </Link>
 
-        {/* Menu Navigasi */}
-        <div className="hidden md:flex items-center space-x-8">
-          <Link href="/" className="hover:font-bold text-black text-[27px]">
+        {/* Menu Navigasi dengan Gaya Aktif */}
+        <div className="hidden md:flex items-center space-x-8 text-[27px]">
+          <Link
+            href="/"
+            // 4. Terapkan gaya kondisional: jika path adalah '/', buat font tebal
+            className={`transition-colors ${
+              pathname === "/" ? "font-bold" : "font-normal hover:font-semibold"
+            }`}
+          >
             Home
           </Link>
           <Link
             href="/projects"
-            className="hover:font-bold text-black text-[27px]"
+            className={`transition-colors ${
+              pathname === "/projects"
+                ? "font-bold"
+                : "font-normal hover:font-semibold"
+            }`}
           >
             Project
           </Link>
           <Link
             href="/about"
-            className="hover:font-bold text-black text-[27px]"
+            className={`transition-colors ${
+              pathname === "/about"
+                ? "font-bold"
+                : "font-normal hover:font-semibold"
+            }`}
           >
             About
           </Link>
           <Link
+            href="/resume"
+            className={`transition-colors ${
+              pathname === "/resume"
+                ? "font-bold"
+                : "font-normal hover:font-semibold"
+            }`}
+          >
+            Resume
+          </Link>
+          <Link
             href="/contact"
-            className="font-semibold border-[0.5px] text-[27px] border-black px-5 py-1"
+            // Untuk tombol, kita bisa ubah warna border atau background saat aktif
+            className={`border-[0.5px] px-5 py-1 transition-colors ${
+              pathname === "/contact"
+                ? "bg-black text-white font-semibold"
+                : "border-black font-normal hover:bg-gray-100"
+            }`}
           >
             Contact
           </Link>
@@ -42,23 +82,7 @@ const Navbar = () => {
 
         {/* Tombol menu untuk mobile (opsional) */}
         <div className="md:hidden">
-          <button>
-            {/* Anda bisa menambahkan ikon hamburger di sini */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
+          <button>{/* ... ikon hamburger ... */}</button>
         </div>
       </div>
     </nav>
