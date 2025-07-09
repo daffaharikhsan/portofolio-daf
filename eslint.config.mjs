@@ -10,7 +10,15 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  // Konfigurasi yang sudah ada sebelumnya
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // TAMBAHKAN OBJEK BARU DI BAWAH INI
+  {
+    rules: {
+      "react/no-unescaped-entities": "off",
+    },
+  },
 ];
 
 export default eslintConfig;

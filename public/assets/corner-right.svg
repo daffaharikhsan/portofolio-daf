@@ -1,0 +1,15 @@
+<svg width="345" height="348" viewBox="0 0 345 348" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="87" height="87" transform="matrix(-1 0 0 1 348 261)" fill="#0554F2"/>
+<rect width="87" height="87" transform="matrix(-1 0 0 1 261 261)" fill="#0528F2"/>
+<rect width="87" height="87" transform="matrix(-1 0 0 1 261 174)" fill="#F2F2F2"/>
+<rect width="87" height="87" transform="matrix(-1 0 0 1 348 87)" fill="#0528F2"/>
+<rect width="87" height="87" transform="matrix(-1 0 0 1 174 0)" fill="#0528F2"/>
+<rect width="87" height="87" transform="matrix(-1 0 0 1 174 261)" fill="#0554F2"/>
+<path d="M348 261H261L348 174V261Z" fill="#5086F2"/>
+<path d="M174 174H87L174 261V174Z" fill="#5086F2"/>
+<path d="M174 87H87L174 174V87Z" fill="#F2F2F2"/>
+<path d="M261 174H174L261 87V174Z" fill="#0554F2"/>
+<path d="M348 87H261L348 0V87Z" fill="#F2F2F2"/>
+<path d="M174 87H261L174 0V87Z" fill="#0540F2"/>
+<path d="M87 348H0L87 261V348Z" fill="#0528F2"/>
+</svg>
