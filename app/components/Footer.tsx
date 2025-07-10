@@ -32,7 +32,7 @@ const Footer = () => {
           as="h2"
         />
 
-        <div className="w-[310px] h-[7px] bg-[#F1F5F9] rounded-full mx-auto mb-12"></div>
+        <div className="w-[160px] h-[7px] bg-[#5086F2] rounded-full mx-auto mb-12"></div>
 
         <h3 className="text-xl md:text-[35px] font-semibold mb-8">
           Contact Info
