@@ -64,6 +64,7 @@ export default function HomePage() {
           <div className="w-full max-w-[1920px] mx-auto">
             <div className="my-20 pt-40 text-center">
               <h2 className="text-[130px] font-bold mb-2">About Me</h2>
+              <div className="w-[160px] h-[7px] bg-[#5086F2] rounded-full mx-auto mb-12"></div>
               <p className="text-black font-light text-[40px] leading-[1.3] max-w-auto mx-auto">
                 Here's a look into my professional philosophy, my creative
                 process, and the skills I use to bring ideas to life.
@@ -75,8 +76,8 @@ export default function HomePage() {
                 <Image
                   src="/assets/poto.svg"
                   alt="Daffa Harikhsan"
-                  width={1080}
-                  height={1080}
+                  width={1920}
+                  height={1920}
                   className="rounded-lg object-cover w-full h-auto"
                 />
               </div>
@@ -87,25 +88,44 @@ export default function HomePage() {
                 <h2 className="text-8xl font-bold mb-10">Get to Know Me!</h2>
 
                 {/* DIUBAH: Ukuran font paragraf diperbesar */}
-                <div className="space-y-10 text-3xl font-light text-gray-700">
+                <div className="space-y-10 text-4xl font-light text-gray-700">
                   <p>
-                    To me, true innovation doesn't come from having the right
-                    answers, but from the boldness to ask better questions:
-                    "What if this could be simpler? More intuitive? More human?"
-                    This is where my creative process always begins.
+                    To me, true innovation doesn't come from{" "}
+                    <span className="font-bold">having the right answers</span>,
+                    but from the boldness to ask better questions: "What if this
+                    could be simpler? More intuitive? More human?" This is where
+                    my{" "}
+                    <span className="font-bold">
+                      creative process always begins
+                    </span>
+                    .
                   </p>
                   <p>
-                    I channel that curiosity into designing digital experiences
-                    that challenge convention. My goal isn't just to build
-                    features, but to craft intuitive flows that open up new
-                    perspectives for the user. I treat every project as an
-                    exploration to find the most elegant solution.
+                    I channel that curiosity into{" "}
+                    <span className="font-bold">
+                      designing digital experiences{" "}
+                    </span>
+                    that challenge convention. My goal{" "}
+                    <span className="font-bold">
+                      {" "}
+                      isn't just to build features,{" "}
+                    </span>
+                    but to{" "}
+                    <span className="font-bold">
+                      craft intuitive flows
+                    </span>{" "}
+                    that open up new perspectives for the user. I treat every
+                    project as an <span className="font-bold">exploration</span>{" "}
+                    to find the most{" "}
+                    <span className="font-bold">elegantsolution.</span>
                   </p>
                   <p>
                     I believe the best products emerge from a collaboration that
                     isn't afraid to explore. If you're looking for a partner to
-                    question boundaries and build something truly different,
-                    let's start that conversation!
+                    question boundaries and build something truly different,{" "}
+                    <span className="font-bold">
+                      let's start that conversation!
+                    </span>
                   </p>
                 </div>
 
