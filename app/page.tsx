@@ -88,7 +88,7 @@ export default function HomePage() {
                 <h2 className="text-8xl font-bold mb-10">Get to Know Me!</h2>
 
                 {/* DIUBAH: Ukuran font paragraf diperbesar */}
-                <div className="space-y-10 text-4xl font-light text-gray-700">
+                <div className="space-y-10 text-3xl font-light text-gray-700">
                   <p>
                     To me, true innovation doesn't come from{" "}
                     <span className="font-bold">having the right answers</span>,
@@ -137,7 +137,7 @@ export default function HomePage() {
                       <div
                         key={skill}
                         // DIUBAH: Ukuran font skill tag diperbesar
-                        className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg text-2xl"
+                        className="bg-gray-200 text-gray-800 px-7 py-4 rounded-lg text-3xl transition-transform duration-300 hover:scale-125"
                       >
                         {skill}
                       </div>
