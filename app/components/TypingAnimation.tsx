@@ -9,7 +9,7 @@ const TypingAnimation = () => {
       // Urutan animasi: [teks1, jeda, teks2, jeda, dst...]
       sequence={[
         "Hey, I’m a Designer",
-        2500, // Jeda 1.5 detik
+        2500, // Jeda 2.5 detik
         "Hey, I’m a Developer",
         2500,
         "Hey, I’m Daffa Harikhsan👋",
@@ -17,7 +17,7 @@ const TypingAnimation = () => {
       ]}
       wrapper="h1" // Elemen pembungkusnya adalah <h1>
       speed={10} // Kecepatan mengetik
-      className="text-black text-[48px] lg:text-[100px] font-bold mb-8" // Gaya dari h1 Anda sebelumnya
+      className="text-black text-[100px] lg:text-[170px] font-bold mb-8" // Gaya dari h1 Anda sebelumnya
     />
   );
 };

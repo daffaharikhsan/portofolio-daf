@@ -9,25 +9,25 @@ const Navbar = () => {
   const pathname = usePathname(); // <-- 3. Dapatkan path URL saat ini
 
   return (
-    <nav className="w-full bg-white text-black py-4 px-8 md:px-16 lg:px-24">
+    <nav className="w-full bg-white text-black py-4 px-8 md:px-16 lg:px-24 sticky top-0 z-50">
       <div className="mx-auto flex justify-between items-center">
         {/* Logo atau Nama */}
-        <Link href="/" className="flex items-center gap-[30px]">
+        <Link href="/" className="flex items-center gap-[50px]">
           <Image
             src="/assets/Logo.svg"
             alt="Logo"
-            width={50}
-            height={50}
+            width={70}
+            height={70}
             className="transition-transform duration-300 hover:scale-125"
           />
-          <div className="text-[30px] text-black">
+          <div className="text-[40px] text-black">
             <span className="font-bold">Daffa </span>
             <span className="font-light">Harikhsan</span>
           </div>
         </Link>
 
         {/* Menu Navigasi dengan Gaya Aktif */}
-        <div className="hidden md:flex items-center space-x-8 text-[27px]">
+        <div className="hidden md:flex items-center space-x-24 text-[35px]">
           <Link
             href="/"
             // 4. Terapkan gaya kondisional: jika path adalah '/', buat font tebal
