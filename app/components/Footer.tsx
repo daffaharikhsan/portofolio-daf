@@ -28,32 +28,32 @@ const Footer = () => {
       <div className="relative z-10 mx-auto text-center flex flex-col items-center">
         <AnimatedLetters
           text="Lets Work Together!"
-          className="text-4xl md:text-[80px] font-bold mb-10"
+          className="text-4xl md:text-7xl lg:text-8xl font-bold mb-10"
           as="h2"
         />
 
-        <div className="w-[160px] h-[7px] bg-[#5086F2] rounded-full mx-auto mb-12"></div>
+        <div className="w-32 h-2 md:w-[160px] md:h-[7px] bg-[#5086F2] rounded-full mx-auto mb-12"></div>
 
-        <h3 className="text-xl md:text-[35px] font-semibold mb-8">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-8">
           Contact Info
         </h3>
 
         <a
           href="mailto:dharikhsan22@gmail.com"
-          className="flex items-center gap-[20px] text-lg md:text-[30px] text-gray-700 hover:text-[#0554F2] transition-colors duration-300 mb-8"
+          className="flex items-center gap-4 text-xl md:text-2xl lg:text-3xl text-gray-700 hover:text-[#0554F2] transition-colors duration-300 mb-8"
         >
-          <FiMail size={38} />
+          <FiMail className="w-8 h-8 md:w-9 md:h-9" />
           <span>dharikhsan22@gmail.com</span>
         </a>
 
-        <div className="flex justify-center space-x-8">
+        <div className="flex justify-center space-x-8 md:space-x-10">
           <a
             href="https://instagram.com/daffaharikhsan_"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-800 hover:text-[#0554F2] transition-transform duration-300 hover:scale-125"
           >
-            <FaInstagram size={48} />
+            <FaInstagram className="w-10 h-10 md:w-12 md:h-12" />
           </a>
           <a
             href="https://linkedin.com/in/daffa-harikhsan-26sep04"
@@ -61,7 +61,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-800 hover:text-[#0554F2] transition-transform duration-300 hover:scale-125"
           >
-            <FaLinkedin size={48} />
+            <FaLinkedin className="w-10 h-10 md:w-12 md:h-12" />
           </a>
           <a
             href="https://github.com/daffaharikhsan"
@@ -69,12 +69,12 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="text-gray-800 hover:text-[#0554F2] transition-transform duration-300 hover:scale-125"
           >
-            <FaGithub size={48} />
+            <FaGithub className="w-10 h-10 md:w-12 md:h-12" />
           </a>
         </div>
 
         <div className="mt-16 w-full pt-8">
-          <p className="text-[18px] font-regular text-gray-500">
+          <p className="text-base md:text-lg text-gray-500">
             Copyright 2025 ©{" "}
             <a
               href="https://instagram.com/daffaharikhsan_"

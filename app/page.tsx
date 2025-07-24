@@ -48,7 +48,7 @@ export default function HomePage() {
           <motion.div style={{ opacity: heroOpacity }}>
             <div className="pb-60">
               <TypingAnimation />
-              <p className="text-gray-600 text-[25px] lg:text-[45px] max-w-[2000px] mx-auto px-4">
+              <p className="text-gray-600 text-xl sm:text-2xl md:text-3xl lg:text-4xl max-w-5xl mx-auto px-4">
                 A Designer and Developer passionate about turning ideas into
                 digital experiences. I craft intuitive interfaces and build
                 functional websites and mobile applications.
@@ -61,23 +61,25 @@ export default function HomePage() {
       {/* Bagian Konten Utama */}
       <div className="relative z-10 bg-white px-4 sm:px-6 lg:px-8 -mt-[100vh]">
         <motion.div style={{ opacity: contentOpacity, y: contentY }}>
-          <div className="w-full max-w-[1920px] mx-auto">
-            <div className="my-20 pt-40 text-center">
-              <h2 className="text-[130px] font-bold mb-2">About Me</h2>
-              <div className="w-[160px] h-[7px] bg-[#5086F2] rounded-full mx-auto mb-12"></div>
-              <p className="text-black font-light text-[40px] leading-[1.3] max-w-auto mx-auto">
+          <div className="w-full max-w-7xl mx-auto px-4">
+            <div className="my-16 md:my-24 pt-24 md:pt-40 text-center">
+              <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-4">
+                About Me
+              </h2>
+              <div className="w-28 md:w-48 h-2.5 bg-[#5086F2] rounded-full mx-auto mb-8 md:mb-14"></div>
+              <p className="text-black font-light text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed max-w-5xl mx-auto">
                 Here's a look into my professional philosophy, my creative
                 process, and the skills I use to bring ideas to life.
               </p>
             </div>
 
-            <div className="my-20 flex flex-col md:flex-row items-start gap-40">
+            <div className="my-16 md:my-24 flex flex-col md:flex-row items-start gap-12 md:gap-24 lg:gap-40">
               <div className="w-full md:w-1/2">
                 <Image
                   src="/assets/poto.svg"
                   alt="Daffa Harikhsan"
-                  width={1920}
-                  height={1920}
+                  width={1000}
+                  height={1000}
                   className="rounded-lg object-cover w-full h-auto"
                 />
               </div>
@@ -85,10 +87,12 @@ export default function HomePage() {
               {/* === PERUBAHAN FOKUS DI SINI === */}
               <div className="w-full md:w-1/2 text-left">
                 {/* DIUBAH: Ukuran font diperbesar */}
-                <h2 className="text-8xl font-bold mb-10">Get to Know Me!</h2>
+                <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 md:mb-12">
+                  Get to Know Me!
+                </h2>
 
                 {/* DIUBAH: Ukuran font paragraf diperbesar */}
-                <div className="space-y-10 text-3xl font-light text-gray-700">
+                <div className="space-y-8 md:space-y-10 text-lg sm:text-xl md:text-2xl font-light text-gray-700">
                   <p>
                     To me, true innovation doesn't come from{" "}
                     <span className="font-bold">having the right answers</span>,
@@ -129,15 +133,17 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <div className="mt-24">
+                <div className="mt-16 md:mt-28">
                   {/* DIUBAH: Ukuran font diperbesar & margin bottom ditambah */}
-                  <h2 className="text-8xl font-bold mb-10">My Skills</h2>
-                  <div className="flex flex-wrap gap-5">
+                  <h2 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 md:mb-12">
+                    My Skills
+                  </h2>
+                  <div className="flex flex-wrap gap-4 sm:gap-5 md:gap-6">
                     {skills.map((skill) => (
                       <div
                         key={skill}
                         // DIUBAH: Ukuran font skill tag diperbesar
-                        className="bg-gray-200 text-gray-800 px-7 py-4 rounded-lg text-3xl transition-transform duration-300 hover:scale-125"
+                        className="bg-gray-200 text-gray-800 px-5 py-3 sm:px-6 sm:py-4 rounded-lg text-base sm:text-lg md:text-xl transition-transform duration-300 hover:scale-110"
                       >
                         {skill}
                       </div>
