@@ -17,7 +17,7 @@ const TypingAnimation = () => {
       ]}
       wrapper="h1" // Elemen pembungkusnya adalah <h1>
       speed={10} // Kecepatan mengetik
-      className="text-black text-[100px] lg:text-[170px] font-bold mb-8" // Gaya dari h1 Anda sebelumnya
+      className="text-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8" // Gaya dari h1 Anda sebelumnya
     />
   );
 };

@@ -5,13 +5,35 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const CustomCursor = () => {
-  // State untuk menyimpan posisi mouse
   const [position, setPosition] = useState({ x: -100, y: -100 });
-  // State untuk melacak apakah mouse sedang di atas elemen interaktif
   const [isHovering, setIsHovering] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
-    // Fungsi untuk memperbarui posisi
+    // Cek apakah perangkat mendukung touch event
+    const checkForTouchDevice = () => {
+      // Cek sederhana bisa dengan 'ontouchstart' in window
+      // atau media query yang lebih modern
+      const hasTouch =
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        window.matchMedia("(pointer: coarse)").matches;
+      setIsTouchDevice(hasTouch);
+    };
+
+    checkForTouchDevice();
+    // Tambahkan listener jika orientasi atau ukuran layar berubah
+    window.addEventListener("resize", checkForTouchDevice);
+
+    return () => {
+      window.removeEventListener("resize", checkForTouchDevice);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Jika ini adalah perangkat sentuh, jangan jalankan sisa logikanya
+    if (isTouchDevice) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -32,7 +54,6 @@ const CustomCursor = () => {
       el.addEventListener("mouseleave", handleMouseLeave);
     });
 
-    // Fungsi cleanup untuk menghapus event listener saat komponen dibongkar
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
       interactiveElements.forEach((el) => {
@@ -40,11 +61,16 @@ const CustomCursor = () => {
         el.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
-  }, []); // Array dependensi kosong, jadi ini hanya berjalan sekali
+  }, [isTouchDevice]); // Tambahkan isTouchDevice sebagai dependensi
+
+  // Jika ini adalah perangkat sentuh, jangan render kursor sama sekali
+  if (isTouchDevice) {
+    return null;
+  }
 
   return (
     <div
-      className={`custom-cursor ${isHovering ? "grow" : ""}`}
+      className={`custom-cursor hidden md:block ${isHovering ? "grow" : ""}`}
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
