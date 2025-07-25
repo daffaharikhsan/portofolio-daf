@@ -8,6 +8,30 @@ const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [cursorSrc, setCursorSrc] = useState("/assets/cursor.svg");
+
+  useEffect(() => {
+    const updateCursorSrc = () => {
+      const isDarkMode = document.documentElement.classList.contains("dark");
+      setCursorSrc(
+        isDarkMode ? "/assets/Cursor-put.svg" : "/assets/cursor.svg"
+      );
+    };
+
+    // Set initial cursor
+    updateCursorSrc();
+
+    // Observe changes to the class attribute of the html element
+    const observer = new MutationObserver(updateCursorSrc);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     // Cek apakah perangkat mendukung touch event
@@ -83,7 +107,7 @@ const CustomCursor = () => {
       {/* Ganti dengan komponen SVG Anda */}
       {/* Contoh jika menggunakan file SVG */}
       <Image
-        src="/assets/cursor.svg" // Ganti dengan path SVG cursor Anda
+        src={cursorSrc} // Ganti dengan path SVG cursor Anda
         alt="Custom Cursor"
         width={40} // Sesuaikan ukuran default
         height={40}

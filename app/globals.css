@@ -3,9 +3,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+
+  .dark {
+    --background: #000000;
+    --foreground: #ffffff;
+  }
+}
+
 body {
-  background-color: #ffffff; /* Warna abu-abu gelap */
-  color: #000000;
+  background-color: var(--background);
+  color: var(--foreground);
   position: relative;
   font-family: "Bahnschrift", sans-serif;
 }

@@ -4,6 +4,7 @@ module.exports = {
     // Arahkan Tailwind untuk memindai semua file di dalam folder app
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       // Menambahkan font kustom Bahnschrift

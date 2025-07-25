@@ -7,7 +7,7 @@ import Image from "next/image"; // <-- Jangan lupa import Image
 const Footer = () => {
   return (
     // 1. Jadikan footer sebagai patokan posisi (relative) dan sembunyikan overflow
-    <footer className="w-full bg-white text-black py-16 px-4 relative overflow-hidden">
+    <footer className="w-full bg-white dark:bg-gray-900 text-black dark:text-white py-16 px-4 relative overflow-hidden">
       {/* 2. Tambahkan gambar SVG di lapisan belakang (z-0) */}
       <Image
         src="/assets/corner-left.svg"
@@ -34,13 +34,13 @@ const Footer = () => {
 
         <div className="w-20 md:w-32 h-1 bg-[#5086F2] rounded-full mx-auto mb-6 md:mb-8"></div>
 
-        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-5">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-5 text-black dark:text-white">
           Contact Info
         </h3>
 
         <a
           href="mailto:dharikhsan22@gmail.com"
-          className="flex items-center gap-2.5 text-base sm:text-lg md:text-xl text-gray-700 hover:text-[#0554F2] transition-colors duration-300 mb-6"
+          className="flex items-center gap-2.5 text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300 hover:text-[#0554F2] transition-colors duration-300 mb-6"
         >
           <FiMail className="w-5 h-5 md:w-6 md:h-6" />
           <span>dharikhsan22@gmail.com</span>
@@ -51,7 +51,7 @@ const Footer = () => {
             href="https://instagram.com/daffaharikhsan_"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 hover:text-[#0554F2] transition-transform duration-300 hover:scale-110"
+            className="text-gray-800 dark:text-gray-300 hover:text-[#0554F2] transition-transform duration-300 hover:scale-110"
           >
             <FaInstagram className="w-6 h-6 md:w-7 md:h-7" />
           </a>
@@ -59,7 +59,7 @@ const Footer = () => {
             href="https://linkedin.com/in/daffa-harikhsan-26sep04"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 hover:text-[#0554F2] transition-transform duration-300 hover:scale-110"
+            className="text-gray-800 dark:text-gray-300 hover:text-[#0554F2] transition-transform duration-300 hover:scale-110"
           >
             <FaLinkedin className="w-6 h-6 md:w-7 md:h-7" />
           </a>
@@ -67,20 +67,20 @@ const Footer = () => {
             href="https://github.com/daffaharikhsan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 hover:text-[#0554F2] transition-transform duration-300 hover:scale-110"
+            className="text-gray-800 dark:text-gray-300 hover:text-[#0554F2] transition-transform duration-300 hover:scale-110"
           >
             <FaGithub className="w-6 h-6 md:w-7 md:h-7" />
           </a>
         </div>
 
-        <div className="mt-10 md:mt-12 w-full pt-6 border-t border-gray-200/70">
-          <p className="text-sm sm:text-base text-gray-500">
+        <div className="mt-10 md:mt-12 w-full pt-6 border-t border-gray-200/70 dark:border-gray-700/70">
+          <p className="text-sm sm:text-base text-gray-500 dark:text-gray-400">
             Copyright 2025 ©{" "}
             <a
               href="https://instagram.com/daffaharikhsan_"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold hover:underline hover:text-[#0554F2] transition-colors"
+              className="font-semibold hover:underline hover:text-[#0554F2] transition-colors text-black dark:text-white"
             >
               Daffa Harikhsan
             </a>
