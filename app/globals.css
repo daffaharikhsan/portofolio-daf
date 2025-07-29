@@ -51,18 +51,18 @@ body::after {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  [letter-animation="hover"]:hover > span {
+  [data-letter-animation="hover"]:hover > span {
     transform: scale(0.75) perspective(1px);
   }
 
-  [letter-animation="hover"] > span {
+  [data-letter-animation="hover"] > span {
     display: inline-block; /* Tambahkan ini */
     transition: transform 0.3s ease;
     cursor: pointer;
     will-change: transform;
   }
 
-  [letter-animation="hover"] > span:hover {
+  [data-letter-animation="hover"] > span:hover {
     transform: scale(1.25) perspective(1px);
   }
 }

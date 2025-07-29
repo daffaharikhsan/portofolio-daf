@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 
 type AnimatedLettersProps = {
   text: string;
-  // Gunakan tipe React.ElementType agar lebih fleksibel (bisa h1, h2, p, div, dll)
   as?: React.ElementType;
   className?: string;
 };
@@ -31,9 +30,12 @@ const AnimatedLetters = ({
 
   // Jika animasi diizinkan, render dengan atribut dan span
   return (
-    <Tag className={className} letter-animation="hover">
+    <Tag className={className} data-letter-animation="hover">
       {text.split("").map((letter, index) => (
-        <span key={`${letter}-${index}`}>
+        <span
+          key={`${letter}-${index}`}
+          style={{ transitionDelay: `${index * 30}ms` }}
+        >
           {letter === " " ? "\u00A0" : letter}
         </span>
       ))}
