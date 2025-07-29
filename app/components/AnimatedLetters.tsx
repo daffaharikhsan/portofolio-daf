@@ -5,15 +5,10 @@ import React, { useState, useEffect } from "react";
 
 type AnimatedLettersProps = {
   text: string;
-  as?: React.ElementType;
   className?: string;
 };
 
-const AnimatedLetters = ({
-  text,
-  as: Tag = "h2",
-  className,
-}: AnimatedLettersProps) => {
+const AnimatedLetters = ({ text, className }: AnimatedLettersProps) => {
   const [isMotionOK, setIsMotionOK] = useState(false);
 
   useEffect(() => {
@@ -23,14 +18,12 @@ const AnimatedLetters = ({
     setIsMotionOK(mediaQuery.matches);
   }, []);
 
-  // Jika animasi tidak diizinkan, render tag dinamis tanpa animasi
   if (!isMotionOK) {
-    return <Tag className={className}>{text}</Tag>;
+    return <h2 className={className}>{text}</h2>;
   }
 
-  // Jika animasi diizinkan, render dengan atribut dan span
   return (
-    <Tag className={className} data-letter-animation="hover">
+    <h2 className={className} data-letter-animation="hover">
       {text.split("").map((letter, index) => (
         <span
           key={`${letter}-${index}`}
@@ -39,7 +32,7 @@ const AnimatedLetters = ({
           {letter === " " ? "\u00A0" : letter}
         </span>
       ))}
-    </Tag>
+    </h2>
   );
 };
 
