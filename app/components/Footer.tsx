@@ -29,7 +29,6 @@ const Footer = () => {
         <AnimatedLetters
           text="Lets Work Together!"
           className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 md:mb-6"
-          as="h2"
         />
 
         <div className="w-20 md:w-32 h-1 bg-[#5086F2] rounded-full mx-auto mb-6 md:mb-8"></div>
