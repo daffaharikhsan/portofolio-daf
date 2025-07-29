@@ -22,7 +22,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="font-sans bg-white text-black">
+      <body
+        className="font-sans bg-white text-black"
+        suppressHydrationWarning={true}
+      >
         <CustomCursor />
 
         <AnimatePresence mode="wait">

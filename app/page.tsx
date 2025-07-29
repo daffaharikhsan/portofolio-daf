@@ -1,4 +1,5 @@
 "use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import TypingAnimation from "./components/TypingAnimation";
@@ -31,6 +32,7 @@ export default function HomePage() {
   ];
 
   const scrollRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ["start start", "end start"],
@@ -42,7 +44,7 @@ export default function HomePage() {
 
   return (
     <main className="flex-grow bg-white dark:bg-gray-900">
-      {/* Bagian Hero (tidak diubah) */}
+      {/* Scrollable container for hero animation */}
       <div ref={scrollRef} className="relative h-[200vh]">
         <div className="sticky top-0 h-screen flex flex-col items-center justify-center text-center">
           <motion.div style={{ opacity: heroOpacity }}>
@@ -58,10 +60,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Bagian Konten Utama */}
+      {/* Main Content Section */}
       <div className="relative z-10 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8 -mt-[100vh]">
         <motion.div style={{ opacity: contentOpacity, y: contentY }}>
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* About Me Title */}
             <div className="my-12 md:my-20 pt-20 md:pt-32 text-center">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 text-black dark:text-white">
                 About Me
@@ -73,6 +76,7 @@ export default function HomePage() {
               </p>
             </div>
 
+            {/* About Me Content & Image */}
             <div className="my-12 md:my-20 flex flex-col md:flex-row items-start gap-10 md:gap-16 lg:gap-24">
               <div className="w-full md:w-1/2">
                 <Image
@@ -84,14 +88,11 @@ export default function HomePage() {
                 />
               </div>
 
-              {/* === PERUBAHAN FOKUS DI SINI === */}
               <div className="w-full md:w-1/2 text-left">
-                {/* DIUBAH: Ukuran font diperbesar */}
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-black dark:text-white">
                   Get to Know Me!
                 </h2>
 
-                {/* DIUBAH: Ukuran font paragraf diperbesar */}
                 <div className="space-y-5 md:space-y-6 text-base sm:text-lg font-light text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     To me, true innovation doesn't come from{" "}
@@ -107,21 +108,18 @@ export default function HomePage() {
                   <p>
                     I channel that curiosity into{" "}
                     <span className="font-bold">
-                      designing digital experiences{" "}
-                    </span>
+                      designing digital experiences
+                    </span>{" "}
                     that challenge convention. My goal{" "}
                     <span className="font-bold">
-                      {" "}
-                      isn't just to build features,{" "}
-                    </span>
-                    but to{" "}
-                    <span className="font-bold">
-                      craft intuitive flows
+                      isn't just to build features,
                     </span>{" "}
+                    but to{" "}
+                    <span className="font-bold">craft intuitive flows</span>{" "}
                     that open up new perspectives for the user. I treat every
                     project as an <span className="font-bold">exploration</span>{" "}
                     to find the most{" "}
-                    <span className="font-bold">elegantsolution.</span>
+                    <span className="font-bold">elegant solution.</span>
                   </p>
                   <p>
                     I believe the best products emerge from a collaboration that
@@ -133,8 +131,8 @@ export default function HomePage() {
                   </p>
                 </div>
 
+                {/* Skills Section */}
                 <div className="mt-12 md:mt-16">
-                  {/* DIUBAH: Ukuran font diperbesar & margin bottom ditambah */}
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-black dark:text-white">
                     My Skills
                   </h2>
@@ -142,7 +140,6 @@ export default function HomePage() {
                     {skills.map((skill) => (
                       <div
                         key={skill}
-                        // DIUBAH: Ukuran font skill tag diperbesar
                         className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg text-sm sm:text-base transition-transform duration-300 hover:scale-110"
                       >
                         {skill}

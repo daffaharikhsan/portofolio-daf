@@ -54,7 +54,7 @@ const Navbar = () => {
               height={45}
               className="w-9 h-9 sm:w-11 sm:h-11 transition-transform duration-300 hover:scale-110"
             />
-            <div className="text-lg sm:text-xl md:text-2xl text-black dark:text-white">
+            <div className="text-lg sm:text-xl md:text-2xl text-black dark:text-white transition-transform duration-300 hover:scale-110">
               <span className="font-bold">Daffa </span>
               <span className="font-light">Harikhsan</span>
             </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
               className={`transition-colors ${
                 pathname === "/"
                   ? "font-bold"
-                  : "font-normal hover:font-semibold"
+                  : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
             >
               Home
@@ -78,7 +78,7 @@ const Navbar = () => {
               className={`transition-colors ${
                 pathname === "/projects"
                   ? "font-bold"
-                  : "font-normal hover:font-semibold"
+                  : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
             >
               Project
@@ -88,7 +88,7 @@ const Navbar = () => {
               className={`transition-colors ${
                 pathname === "/about"
                   ? "font-bold"
-                  : "font-normal hover:font-semibold"
+                  : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
             >
               About
@@ -98,7 +98,7 @@ const Navbar = () => {
               className={`transition-colors ${
                 pathname === "/resume"
                   ? "font-bold"
-                  : "font-normal hover:font-semibold"
+                  : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
             >
               Resume
