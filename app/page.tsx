@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { Suspense, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
 import TypingAnimation from "./components/TypingAnimation";
-import Image from "next/image";
+import InteractiveImage from "./components/InteractiveImage"; // Ganti dengan komponen gambar baru
 
 export default function HomePage() {
   const skills = [
@@ -32,7 +33,6 @@ export default function HomePage() {
   ];
 
   const scrollRef = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ["start start", "end start"],
@@ -44,7 +44,6 @@ export default function HomePage() {
 
   return (
     <main className="flex-grow bg-white dark:bg-gray-900">
-      {/* Scrollable container for hero animation */}
       <div ref={scrollRef} className="relative h-[200vh]">
         <div className="sticky top-0 h-screen flex flex-col items-center justify-center text-center">
           <motion.div style={{ opacity: heroOpacity }}>
@@ -60,11 +59,9 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Main Content Section */}
       <div className="relative z-10 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8 -mt-[100vh]">
         <motion.div style={{ opacity: contentOpacity, y: contentY }}>
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* About Me Title */}
             <div className="my-12 md:my-20 pt-20 md:pt-32 text-center">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 text-black dark:text-white">
                 About Me
@@ -76,23 +73,33 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* About Me Content & Image */}
-            <div className="my-12 md:my-20 flex flex-col md:flex-row items-start gap-10 md:gap-16 lg:gap-24">
-              <div className="w-full md:w-1/2">
-                <Image
-                  src="/assets/poto.svg"
-                  alt="Daffa Harikhsan"
-                  width={800}
-                  height={800}
-                  className="rounded-lg object-cover w-full h-auto"
-                />
+            <div className="my-12 md:my-20 flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16 lg:gap-24">
+              <div className="w-full md:w-1/2 aspect-[1566/2606]">
+                {/* --- PERUBAHAN DI SINI --- */}
+                <Canvas camera={{ position: [0, 0, 15], fov: 50 }}>
+                  {/* CAHAYA AMBIENT: Melembutkan bayangan secara keseluruhan */}
+                  <ambientLight intensity={1.5} />
+
+                  {/* CAHAYA UTAMA: Dari arah kanan atas */}
+                  <directionalLight position={[10, 10, 10]} intensity={1} />
+
+                  {/* CAHAYA PENGISI: Dari arah kiri bawah untuk menghilangkan bayangan gelap */}
+                  <directionalLight position={[-10, -10, -5]} intensity={0.6} />
+
+                  <Suspense fallback={null}>
+                    <InteractiveImage
+                      imageUrl="/assets/akhir.png"
+                      size={[8, 13.31]} // Rasio aspek yang sudah disesuaikan
+                    />
+                  </Suspense>
+                </Canvas>
+                {/* --- AKHIR PERUBAHAN --- */}
               </div>
 
               <div className="w-full md:w-1/2 text-left">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-black dark:text-white">
                   Get to Know Me!
                 </h2>
-
                 <div className="space-y-5 md:space-y-6 text-base sm:text-lg font-light text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
                     To me, true innovation doesn't come from{" "}
@@ -108,12 +115,12 @@ export default function HomePage() {
                   <p>
                     I channel that curiosity into{" "}
                     <span className="font-bold">
-                      designing digital experiences
-                    </span>{" "}
+                      designing digital experiences{" "}
+                    </span>
                     that challenge convention. My goal{" "}
                     <span className="font-bold">
-                      isn't just to build features,
-                    </span>{" "}
+                      isn't just to build features,{" "}
+                    </span>
                     but to{" "}
                     <span className="font-bold">craft intuitive flows</span>{" "}
                     that open up new perspectives for the user. I treat every
@@ -130,8 +137,6 @@ export default function HomePage() {
                     </span>
                   </p>
                 </div>
-
-                {/* Skills Section */}
                 <div className="mt-12 md:mt-16">
                   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 text-black dark:text-white">
                     My Skills
