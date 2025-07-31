@@ -106,11 +106,7 @@ const Navbar = () => {
             <a
               href="mailto:dharikhsan22@gmail.com"
               // Untuk tombol, kita bisa ubah warna border atau background saat aktif
-              className={`border-[0.5px] px-5 py-1 transition-colors ${
-                pathname === "/contact"
-                  ? "bg-black text-white dark:bg-white dark:text-black font-semibold"
-                  : "border-black dark:border-white font-normal hover:bg-gray-100 dark:hover:bg-gray-800"
-              }`}
+              className={`border-[0.5px] px-5 py-1 transition-colors border-black dark:border-white font-normal hover:bg-gray-100 dark:hover:bg-gray-800`}
             >
               Contact
             </a>
