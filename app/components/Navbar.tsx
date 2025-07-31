@@ -103,8 +103,8 @@ const Navbar = () => {
             >
               Resume
             </Link>
-            <Link
-              href="/contact"
+            <a
+              href="mailto:dharikhsan22@gmail.com"
               // Untuk tombol, kita bisa ubah warna border atau background saat aktif
               className={`border-[0.5px] px-5 py-1 transition-colors ${
                 pathname === "/contact"
@@ -113,7 +113,7 @@ const Navbar = () => {
               }`}
             >
               Contact
-            </Link>
+            </a>
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full focus:outline-none"
