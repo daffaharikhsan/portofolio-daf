@@ -18,7 +18,8 @@ const images: Image[] = [
     src: "/assets/Baru.jpg",
     alt: "Car 1",
     title: "Car 1",
-    description: "This is the first car.",
+    description:
+      "Lorem ipsum dolor sit amet consectetur. Scelerisque nisi arcu varius adipiscing luctus. Elit viverra fermentum eu egestas. Volutpat quam eleifend semper amet sem egestas at in. Cras eget sit aliquam felis.",
   },
   {
     src: "/assets/poto.jpg",
@@ -27,7 +28,7 @@ const images: Image[] = [
     description: "This is the second car.",
   },
   {
-    src: "/assets/Foto/DSC00106.JPG",
+    src: "/assets/Foto/DSC00422.JPG",
     alt: "Car 3",
     title: "Car 3",
     description: "This is the third car.",
@@ -394,18 +395,20 @@ const ProjectPage = () => {
           onClick={closeModal}
         >
           <div
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl max-w-sm w-full"
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl max-w-4xl w-full md:flex"
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              width={500}
-              height={500}
-              className="object-cover w-full"
-            />
-            <div className="p-4">
-              <h4 className="text-xl font-bold mb-2 text-black dark:text-white">
+            <div className="md:w-1/2">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                width={800}
+                height={800}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="md:w-1/2 p-8">
+              <h4 className="text-2xl font-bold mb-4 text-black dark:text-white">
                 {selectedImage.title}
               </h4>
               <p className="text-gray-600 dark:text-gray-300">
