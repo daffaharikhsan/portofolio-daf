@@ -143,7 +143,7 @@ const ProjectPage = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="aspect-w-1 aspect-h-1"
                 onClick={() => openModal(image)}
               >
                 <Image
@@ -151,16 +151,8 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
                 />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2 text-black dark:text-white">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-base">
-                    {image.description}
-                  </p>
-                </div>
               </div>
             ))}
           </Masonry>
@@ -184,7 +176,7 @@ const ProjectPage = () => {
             {street.map((image, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="aspect-w-1 aspect-h-1"
                 onClick={() => openModal(image)}
               >
                 <Image
@@ -192,16 +184,8 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
                 />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2 text-black dark:text-white">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-base">
-                    {image.description}
-                  </p>
-                </div>
               </div>
             ))}
           </Masonry>
@@ -225,7 +209,7 @@ const ProjectPage = () => {
             {apaya.map((image, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="aspect-w-1 aspect-h-1"
                 onClick={() => openModal(image)}
               >
                 <Image
@@ -233,16 +217,8 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
                 />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2 text-black dark:text-white">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-base">
-                    {image.description}
-                  </p>
-                </div>
               </div>
             ))}
           </Masonry>
@@ -273,7 +249,7 @@ const ProjectPage = () => {
             {images.map((image, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="aspect-w-1 aspect-h-1"
                 onClick={() => openModal(image)}
               >
                 <Image
@@ -281,16 +257,8 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
                 />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2 text-black dark:text-white">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-base">
-                    {image.description}
-                  </p>
-                </div>
               </div>
             ))}
           </Masonry>
@@ -314,7 +282,7 @@ const ProjectPage = () => {
             {street.map((image, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="aspect-w-1 aspect-h-1"
                 onClick={() => openModal(image)}
               >
                 <Image
@@ -322,16 +290,8 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
                 />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2 text-black dark:text-white">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-base">
-                    {image.description}
-                  </p>
-                </div>
               </div>
             ))}
           </Masonry>
@@ -355,7 +315,7 @@ const ProjectPage = () => {
             {apaya.map((image, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+                className="aspect-w-1 aspect-h-1"
                 onClick={() => openModal(image)}
               >
                 <Image
@@ -363,16 +323,8 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
                 />
-                <div className="p-4">
-                  <h3 className="font-bold text-lg mb-2 text-black dark:text-white">
-                    {image.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 text-base">
-                    {image.description}
-                  </p>
-                </div>
               </div>
             ))}
           </Masonry>
