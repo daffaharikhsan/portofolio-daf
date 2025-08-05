@@ -347,7 +347,7 @@ const ProjectPage = () => {
           onClick={closeModal}
         >
           <div
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl max-w-4xl w-full md:flex"
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl max-w-lg w-full md:max-w-4xl md:flex"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="md:w-1/2">
@@ -359,21 +359,21 @@ const ProjectPage = () => {
                 className="object-cover w-full h-full"
               />
             </div>
-            <div className="md:w-1/2 p-8">
+            <div className="md:w-1/2 p-8 relative">
               <h4 className="text-2xl font-bold mb-4 text-black dark:text-white">
                 {selectedImage.title}
               </h4>
               <p className="text-gray-600 dark:text-gray-300">
                 {selectedImage.description}
               </p>
+              <button
+                onClick={closeModal}
+                className="absolute top-0 right-0 m-4 text-black dark:text-white text-2xl"
+              >
+                &times;
+              </button>
             </div>
           </div>
-          <button
-            onClick={closeModal}
-            className="absolute top-0 right-0 m-4 text-white text-2xl"
-          >
-            &times;
-          </button>
         </div>
       )}
     </div>
