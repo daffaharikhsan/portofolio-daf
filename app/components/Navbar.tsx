@@ -35,7 +35,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
-    { href: "/projects", label: "Project" },
+    { href: "/project", label: "Project" },
     { href: "/about", label: "About" },
     { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
@@ -65,7 +65,7 @@ const Navbar = () => {
             <Link
               href="/"
               // 4. Terapkan gaya kondisional: jika path adalah '/', buat font tebal
-              className={`transition-colors ${
+              className={`transition-colors hover-underline ${
                 pathname === "/"
                   ? "font-bold"
                   : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
@@ -74,9 +74,9 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              href="/projects"
-              className={`transition-colors ${
-                pathname === "/projects"
+              href="/project"
+              className={`transition-colors hover-underline ${
+                pathname === "/project"
                   ? "font-bold"
                   : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
@@ -85,7 +85,7 @@ const Navbar = () => {
             </Link>
             <Link
               href="/about"
-              className={`transition-colors ${
+              className={`transition-colors hover-underline ${
                 pathname === "/about"
                   ? "font-bold"
                   : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
@@ -95,7 +95,7 @@ const Navbar = () => {
             </Link>
             <Link
               href="/resume"
-              className={`transition-colors ${
+              className={`transition-colors hover-underline ${
                 pathname === "/resume"
                   ? "font-bold"
                   : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"

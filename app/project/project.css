@@ -1,0 +1,87 @@
+.project-page {
+  padding: 2rem;
+}
+
+.project-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.photography-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.photography-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.design-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.design-section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  background: rgba(255, 255, 255, 0);
+  margin-bottom: 30px;
+}
+
+.placeholder-image {
+  background-color: #ffffff;
+  width: 100%;
+  height: 300px;
+}
+
+.get-more-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.dark .get-more-button {
+  background-color: #357abd;
+}
+
+.get-more-button:hover {
+  background-color: #357abd;
+}
+
+.dark .get-more-button:hover {
+  background-color: #4a90e2;
+}
+
+.get-more-button .arrow {
+  margin-left: 0.5rem;
+}
+
+.fixed.inset-0 {
+  transition: opacity 0.3s ease-in-out;
+}
