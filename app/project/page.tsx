@@ -125,7 +125,7 @@ const ProjectPage = () => {
     <div className="bg-white dark:bg-gray-900">
       <main className="project-page">
         <h1 className="project-title text-4xl sm:text-5xl md:text-6xl font-bold mb-3 text-black dark:text-white">
-          Project
+          Portofolio
         </h1>
         <div className="w-20 md:w-32 h-1.5 bg-[#5086F2] rounded-full mx-auto mb-6 md:mb-10"></div>
         <section className="photography-section">
@@ -151,7 +151,7 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg drop-shadow-xl"
                 />
               </div>
             ))}
@@ -184,7 +184,7 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg drop-shadow-xl"
                 />
               </div>
             ))}
@@ -217,7 +217,7 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg drop-shadow-xl"
                 />
               </div>
             ))}
@@ -257,7 +257,7 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg drop-shadow-xl"
                 />
               </div>
             ))}
@@ -290,7 +290,7 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg drop-shadow-xl"
                 />
               </div>
             ))}
@@ -323,7 +323,7 @@ const ProjectPage = () => {
                   alt={image.alt}
                   width={300}
                   height={300}
-                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105 rounded-lg drop-shadow-xl"
                 />
               </div>
             ))}
@@ -340,7 +340,7 @@ const ProjectPage = () => {
           </div>
         </section>
       </main>
-      ##ini bagian kalo di klik
+
       {selectedImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50 p-4"

@@ -81,7 +81,7 @@ const Navbar = () => {
                   : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
             >
-              Project
+              Portofolio
             </Link>
             <Link
               href="/about"
