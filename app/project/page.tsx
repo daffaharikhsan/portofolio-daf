@@ -158,7 +158,7 @@ const ProjectPage = () => {
           </Masonry>
           <div className="flex justify-end mt-8">
             <a
-              href="#" // Ganti dengan link Google Drive Anda
+              href="https://www.figma.com/design/ou16gX2TJc5ulmyfZqtdHr/Daffa-s-Dashboard?node-id=401-39" // Ganti dengan link Google Drive Anda
               target="_blank"
               rel="noopener noreferrer"
               className="get-more-button"
