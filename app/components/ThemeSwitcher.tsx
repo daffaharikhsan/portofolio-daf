@@ -29,7 +29,7 @@ export const ThemeSwitcher = () => {
     >
       {theme === "light" && (
         <Image
-          src="/assets/toggle/Light.svg"
+          src="/assets/Toggle/Light.svg"
           alt="Light Mode"
           width={24}
           height={24}
@@ -37,7 +37,7 @@ export const ThemeSwitcher = () => {
       )}
       {theme === "dark" && (
         <Image
-          src="/assets/toggle/Dark.svg"
+          src="/assets/Toggle/Dark.svg"
           alt="Dark Mode"
           width={24}
           height={24}
@@ -45,7 +45,7 @@ export const ThemeSwitcher = () => {
       )}
       {theme === "system" && (
         <Image
-          src="/assets/toggle/System.svg"
+          src="/assets/Toggle/System.svg"
           alt="System Mode"
           width={24}
           height={24}
