@@ -9,6 +9,7 @@ import Preloader from "./components/Preloader";
 import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "./components/ThemeProvider";
 
 // Karena ini Client Component, kita tidak bisa ekspor metadata di sini.
 // Anda bisa menaruh metadata langsung di tag <head> jika perlu.
@@ -21,35 +22,40 @@ export default function RootLayout({
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <html lang="en">
-      <body
-        className="font-sans bg-white text-black"
-        suppressHydrationWarning={true}
-      >
-        <CustomCursor />
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-sans" suppressHydrationWarning={true}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          storageKey="portfolio-theme"
+        >
+          <CustomCursor />
 
-        <AnimatePresence mode="wait">
-          {isLoading && (
-            <Preloader onAnimationComplete={() => setIsLoading(false)} />
+          <AnimatePresence mode="wait">
+            {isLoading && (
+              <Preloader onAnimationComplete={() => setIsLoading(false)} />
+            )}
+          </AnimatePresence>
+
+          {/* Konten utama hanya akan muncul setelah loading selesai */}
+          {!isLoading && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="flex flex-col min-h-screen" // <-- Layout flexbox utama
+            >
+              <Navbar />
+
+              {/* children adalah konten dari page.tsx */}
+              {children}
+
+              <Footer />
+            </motion.div>
           )}
-        </AnimatePresence>
-
-        {/* Konten utama hanya akan muncul setelah loading selesai */}
-        {!isLoading && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="flex flex-col min-h-screen" // <-- Layout flexbox utama
-          >
-            <Navbar />
-
-            {/* children adalah konten dari page.tsx */}
-            {children}
-
-            <Footer />
-          </motion.div>
-        )}
+        </ThemeProvider>
       </body>
     </html>
   );

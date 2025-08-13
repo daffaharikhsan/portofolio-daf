@@ -5,19 +5,19 @@
 
 @layer base {
   :root {
-    --background: #ffffff;
-    --foreground: #000000;
+    --background: 255 255 255;
+    --foreground: 0 0 0;
   }
 
   .dark {
-    --background: #000000;
-    --foreground: #ffffff;
+    --background: 0 0 0;
+    --foreground: 255 255 255;
   }
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
   position: relative;
   font-family: "Bahnschrift", sans-serif;
 }
