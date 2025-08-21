@@ -43,7 +43,7 @@ export default function HomePage() {
   const contentY = useTransform(scrollYProgress, [0.1, 0.3], ["30px", "0px"]);
 
   return (
-    <main className="flex-grow bg-white dark:bg-gray-900">
+    <main className="flex-grow bg-white dark:bg-black">
       <div ref={scrollRef} className="relative h-[200vh]">
         <div className="sticky top-0 h-screen flex flex-col items-center justify-center text-center">
           <motion.div style={{ opacity: heroOpacity }}>

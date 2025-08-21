@@ -7,7 +7,7 @@ import Image from "next/image"; // <-- Jangan lupa import Image
 const Footer = () => {
   return (
     // 1. Jadikan footer sebagai patokan posisi (relative) dan sembunyikan overflow
-    <footer className="w-full bg-white dark:bg-gray-900 text-black dark:text-white py-16 px-4 relative overflow-hidden">
+    <footer className="w-full bg-white dark:bg-black text-black dark:text-white py-16 px-4 relative overflow-hidden">
       {/* 2. Tambahkan gambar SVG di lapisan belakang (z-0) */}
       <Image
         src="/assets/corner-left.svg"

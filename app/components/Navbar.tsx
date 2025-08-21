@@ -17,6 +17,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/project", label: "Project" },
+    { href: "/certificates", label: "Certificates" },
     { href: "/about", label: "About" },
     { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
@@ -24,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full bg-white dark:bg-gray-900 text-black dark:text-white py-3 px-6 sm:px-8 md:px-12 lg:px-16 sticky top-0 z-50 border-b border-gray-200/80 dark:border-gray-700/80">
+      <nav className="w-full bg-white dark:bg-black text-black dark:text-white py-3 px-6 sm:px-8 md:px-12 lg:px-16 sticky top-0 z-50 border-b border-gray-200/80 dark:border-gray-700/80">
         <div className="mx-auto flex justify-between items-center">
           {/* Logo atau Nama */}
           <Link href="/" className="flex items-center gap-3 sm:gap-4">
@@ -62,7 +63,17 @@ const Navbar = () => {
                   : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
             >
-              Portofolio
+              Project
+            </Link>
+            <Link
+              href="/certificates"
+              className={`transition-colors hover-underline ${
+                pathname === "/certificates"
+                  ? "font-bold"
+                  : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
+              }`}
+            >
+              Certificates
             </Link>
             <Link
               href="/about"

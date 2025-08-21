@@ -1,5 +1,5 @@
 "use client";
-
+//Ini sebenernya page Portofolio
 import React, { useState } from "react";
 import Image from "next/image";
 import Masonry from "react-masonry-css";
@@ -122,7 +122,7 @@ const ProjectPage = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div className="bg-white dark:bg-black">
       <main className="project-page">
         <h1 className="project-title text-4xl sm:text-5xl md:text-6xl font-bold mb-3 text-black dark:text-white">
           Portofolio
@@ -347,7 +347,7 @@ const ProjectPage = () => {
           onClick={closeModal}
         >
           <div
-            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-xl max-w-lg w-full md:max-w-4xl md:flex"
+            className="bg-white dark:bg-black rounded-lg overflow-hidden shadow-xl max-w-lg w-full md:max-w-4xl md:flex"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="md:w-1/2">
