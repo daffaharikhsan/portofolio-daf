@@ -110,7 +110,7 @@ const Navbar = () => {
             <ThemeSwitcher />
             <button
               onClick={toggleMenu}
-              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+              className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
               aria-label="Open menu"
             >
               <svg

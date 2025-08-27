@@ -59,7 +59,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="relative z-10 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8 -mt-[100vh]">
+      <div className="relative z-10 bg-white dark:bg-black px-4 sm:px-6 lg:px-8 -mt-[100vh]">
         <motion.div style={{ opacity: contentOpacity, y: contentY }}>
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="my-12 md:my-20 pt-20 md:pt-32 text-center">
