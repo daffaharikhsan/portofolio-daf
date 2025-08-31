@@ -1,0 +1,78 @@
+.experience-timeline {
+  position: relative;
+  padding-left: 2rem; /* Space for the timeline line and dots */
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px; /* Adjust based on dot size */
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background-color: #e2e8f0; /* light gray */
+}
+
+.dark .experience-timeline::before {
+  background-color: #4a5568; /* dark gray */
+}
+
+.experience-item {
+  position: relative;
+  margin-bottom: 2.5rem; /* 40px */
+  padding-left: 2.5rem; /* Space for dot */
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-dot-container {
+  position: absolute;
+  left: 0;
+  top: 5px; /* Align with text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #5086f2; /* Blue color from title underline */
+  border: 2px solid #fff;
+}
+
+.dark .experience-dot {
+  border-color: #000;
+}
+
+.experience-content {
+  position: relative;
+}
+
+.present-tag {
+  background-color: #e2e8f0;
+  color: #4a5568;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px; /* pill shape */
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  display: inline-block;
+}
+
+.dark .present-tag {
+  background-color: #4a5568;
+  color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .experience-timeline {
+    padding-left: 1.5rem;
+  }
+
+  .experience-item {
+    padding-left: 2rem;
+  }
+}
