@@ -9,84 +9,96 @@ const certificates = [
     image: "/assets/Foto/DSC06372.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/Foto/DSC06372.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/Foto/DSC06372.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/Baru.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/akhir.png",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/Baru.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/akhir.png",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/Baru.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/akhir.png",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/Baru.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/akhir.png",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   {
     image: "/assets/Baru.jpg",
     title: "Photography",
     issuer: "Google",
-    description: "lorem ipsum dolor sit amet",
+    description:
+      "This certificate acknowledges proficiency in digital photography techniques and composition.",
     link: "#",
   },
   // ... sisa data
@@ -119,6 +131,9 @@ const CertificatesPage = () => {
                 <div className="certificate-content">
                   <h2 className="certificate-card-title">| {cert.title}</h2>
                   <p className="certificate-issuer">{cert.issuer}</p>
+                  <p className="certificate-description text-gray-600 dark:text-gray-400 mb-4">
+                    {cert.description}
+                  </p>
                   <Link href={cert.link} className="credential-button">
                     Show Credential
                     <svg
