@@ -18,7 +18,7 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     { href: "/project", label: "Project" },
     { href: "/certificates", label: "Certificates" },
-    { href: "/about", label: "About" },
+    { href: "/About", label: "About" },
     { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
   ];
@@ -76,9 +76,9 @@ const Navbar = () => {
               Certificates
             </Link>
             <Link
-              href="/about"
+              href="/About"
               className={`transition-colors hover-underline ${
-                pathname === "/about"
+                pathname === "/About"
                   ? "font-bold"
                   : "font-normal hover:font-semibold transition-transform duration-300 hover:scale-110"
               }`}
@@ -139,7 +139,7 @@ const Navbar = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed top-0 right-0 w-full h-full bg-white dark:bg-gray-900 z-50 md:hidden"
+            className="fixed top-0 right-0 w-full h-full bg-white dark:bg-black z-50 md:hidden"
           >
             <div className="flex flex-col h-full">
               <div className="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700">
@@ -156,7 +156,7 @@ const Navbar = () => {
                 </div>
                 <button
                   onClick={toggleMenu}
-                  className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none"
+                  className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-black focus:outline-none"
                   aria-label="Close menu"
                 >
                   <svg
@@ -178,13 +178,23 @@ const Navbar = () => {
                 <ul className="space-y-4">
                   {navLinks.map(({ href, label }) => (
                     <li key={href}>
-                      <Link
-                        href={href}
-                        onClick={toggleMenu}
-                        className="flex justify-between items-center text-2xl text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white font-medium py-2"
-                      >
-                        <span>{label}</span>
-                      </Link>
+                      {label === "Contact" ? (
+                        <a
+                          href="mailto:dharikhsan22@gmail.com"
+                          onClick={toggleMenu}
+                          className=" flex justify-between items-center text-2xl text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white font-medium py-2 "
+                        >
+                          <span>{label}</span>
+                        </a>
+                      ) : (
+                        <Link
+                          href={href}
+                          onClick={toggleMenu}
+                          className="flex justify-between items-center text-2xl text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white font-medium py-2"
+                        >
+                          <span>{label}</span>
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

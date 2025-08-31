@@ -6,21 +6,21 @@ import Link from "next/link";
 const certificates = [
   // ... (data sertifikat Anda tetap sama, tidak perlu diubah)
   {
-    image: "/assets/akhir.png",
+    image: "/assets/Foto/DSC06372.jpg",
     title: "Photography",
     issuer: "Google",
     description: "lorem ipsum dolor sit amet",
     link: "#",
   },
   {
-    image: "/assets/Baru.jpg",
+    image: "/assets/Foto/DSC06372.jpg",
     title: "Photography",
     issuer: "Google",
     description: "lorem ipsum dolor sit amet",
     link: "#",
   },
   {
-    image: "/assets/akhir.png",
+    image: "/assets/Foto/DSC06372.jpg",
     title: "Photography",
     issuer: "Google",
     description: "lorem ipsum dolor sit amet",

@@ -59,6 +59,7 @@
   height: auto; /* Menjaga rasio aspek gambar */
   object-fit: contain;
   border: 1px solid #e2e8f0; /* Border di sekeliling gambar */
+  border-radius: 5px;
 }
 
 .certificate-content {
@@ -72,6 +73,7 @@
   font-size: 1.25rem; /* 20px */
   font-weight: 600;
   margin-bottom: 0.25rem;
+  color: black;
 }
 
 .certificate-issuer {
