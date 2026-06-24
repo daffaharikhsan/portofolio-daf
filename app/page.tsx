@@ -50,9 +50,8 @@ export default function HomePage() {
             <div className="pb-60">
               <TypingAnimation />
               <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4">
-                A Designer and Developer passionate about turning ideas into
-                digital experiences. I craft intuitive interfaces and build
-                functional websites and mobile applications.
+                A multidisciplinary creative with a passion for design, photography, software development, and finance.
+                I combine creativity, technology, and analytical thinking to build impactful digital experiences and meaningful solutions.
               </p>
             </div>
           </motion.div>
@@ -68,8 +67,7 @@ export default function HomePage() {
               </h2>
               <div className="w-20 md:w-32 h-1.5 bg-[#5086F2] rounded-full mx-auto mb-6 md:mb-10"></div>
               <p className="text-black dark:text-gray-300 font-light text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-                Here's a look into my professional philosophy, my creative
-                process, and the skills I use to bring ideas to life.
+                Combining creativity, technology, and analytical thinking to transform ideas into impactful digital solutions.
               </p>
             </div>
 
@@ -102,39 +100,32 @@ export default function HomePage() {
                 </h2>
                 <div className="space-y-5 md:space-y-6 text-base sm:text-lg font-light text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
-                    To me, true innovation doesn't come from{" "}
-                    <span className="font-bold">having the right answers</span>,
-                    but from the boldness to ask better questions: "What if this
-                    could be simpler? More intuitive? More human?" This is where
-                    my{" "}
-                    <span className="font-bold">
-                      creative process always begins
-                    </span>
-                    .
+                    Hello!{" "}
+                    <span className="font-bold">I'm Daffa Harikhsan</span>,
+                    a Computer Science student, designer, developer, photographer, and finance enthusiast.{" "}
+                    
                   </p>
                   <p>
-                    I channel that curiosity into{" "}
-                    <span className="font-bold">
-                      designing digital experiences{" "}
-                    </span>
-                    that challenge convention. My goal{" "}
-                    <span className="font-bold">
-                      isn't just to build features,{" "}
-                    </span>
-                    but to{" "}
-                    <span className="font-bold">craft intuitive flows</span>{" "}
-                    that open up new perspectives for the user. I treat every
-                    project as an <span className="font-bold">exploration</span>{" "}
-                    to find the most{" "}
-                    <span className="font-bold">elegant solution.</span>
+                    I enjoy bringing ideas to life through a combination of {" "}
+                    <span className="font-bold">creativity and technology</span>. 
+                    My experience in {" "}
+                    <span className="font-bold">design, photography, and software development</span> 
+                    {" "}allows me to approach problems from different perspectives and create solutions that are both {" "}
+                    <span className="font-bold">functional </span> 
+                    and {" "}
+                    <span className="font-bold">visually engaging</span>.{" "}
                   </p>
                   <p>
-                    I believe the best products emerge from a collaboration that
-                    isn't afraid to explore. If you're looking for a partner to
-                    question boundaries and build something truly different,{" "}
-                    <span className="font-bold">
-                      let's start that conversation!
-                    </span>
+                    Beyond technology, I am also interested in {" "}
+                    <span className="font-bold">finance and business</span>
+                    , which help me understand how innovation can {" "}
+                    <span className="font-bold">create real-world value</span>
+                    . I believe that {" "}
+                    <span className="font-bold">continuous learning, curiosity, and creativity</span> {" "}
+                    are the foundation of meaningful work.
+                  </p>
+                  <p>Whether I'm designing an interface, building an application, capturing a story through a camera lens, 
+                    or exploring new opportunities, I'm always excited to learn, create, and make an impact.
                   </p>
                 </div>
                 <div className="mt-12 md:mt-16">

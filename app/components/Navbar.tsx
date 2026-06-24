@@ -1,24 +1,31 @@
 // src/components/Navbar.tsx
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
-const Navbar = () => {
+// 1. PENGETATAN TIPE DATA (TypeScript Interface)
+interface NavLink {
+  href: string;
+  label: string;
+}
+
+const Navbar: React.FC = () => {
   const pathname = usePathname();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const navLinks = [
+  // 2. ARRAY MOBILE MENU (Comment objeknya untuk menyembunyikan dari laci Mobile)
+  const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
-    { href: "/project", label: "Project" },
-    { href: "/certificates", label: "Certificates" },
-    { href: "/About", label: "About" },
+    // { href: "/project", label: "Project" },
+    // { href: "/certificates", label: "Certificates" },
+    // { href: "/About", label: "About" },
     { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
   ];
@@ -42,11 +49,10 @@ const Navbar = () => {
             </div>
           </Link>
 
-          {/* Menu Navigasi dengan Gaya Aktif */}
+          {/* Menu Navigasi Desktop */}
           <div className="hidden md:flex items-center space-x-6 lg:space-x-8 text-base lg:text-lg">
             <Link
               href="/"
-              // 4. Terapkan gaya kondisional: jika path adalah '/', buat font tebal
               className={`transition-colors hover-underline ${
                 pathname === "/"
                   ? "font-bold"
@@ -55,6 +61,9 @@ const Navbar = () => {
             >
               Home
             </Link>
+
+            {/* 3. MENU DESKTOP DI-COMMENT (Bungkus 3 elemen Link dengan tag JSX Comment) */}
+            {/* 
             <Link
               href="/project"
               className={`transition-colors hover-underline ${
@@ -85,8 +94,12 @@ const Navbar = () => {
             >
               About
             </Link>
+            */}
+
             <Link
-              href="/resume"
+              href="https://drive.google.com/drive/folders/1244VObg6Gu3XBwyXmmE2GOEF_UDYlu5c?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`transition-colors hover-underline ${
                 pathname === "/resume"
                   ? "font-bold"
@@ -97,8 +110,7 @@ const Navbar = () => {
             </Link>
             <a
               href="mailto:dharikhsan22@gmail.com"
-              // Untuk tombol, kita bisa ubah warna border atau background saat aktif
-              className={`border-[0.5px] px-5 py-1 transition-colors border-black dark:border-white font-normal hover:bg-gray-100 dark:hover:bg-gray-800`}
+              className="border-[0.5px] px-5 py-1 transition-colors border-black dark:border-white font-normal hover:bg-gray-100 dark:hover:bg-gray-800"
             >
               Contact
             </a>
@@ -176,13 +188,14 @@ const Navbar = () => {
               </div>
               <nav className="flex-grow p-6">
                 <ul className="space-y-4">
+                  {/* 4. Karena navLinks di atas di-comment, map di bawah otomatis menyesuaikan */}
                   {navLinks.map(({ href, label }) => (
                     <li key={href}>
                       {label === "Contact" ? (
                         <a
                           href="mailto:dharikhsan22@gmail.com"
                           onClick={toggleMenu}
-                          className=" flex justify-between items-center text-2xl text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white font-medium py-2 "
+                          className="flex justify-between items-center text-2xl text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white font-medium py-2"
                         >
                           <span>{label}</span>
                         </a>

@@ -1,20 +1,26 @@
 // src/components/ClientWrapper.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import CustomCursor from "./CustomCursor";
-import Preloader from "./Preloader";
+// 1. [COMMENTED] Matikan import untuk menghindari error 'Unused Import' saat proses Build (npm run build)
+// import Preloader from "./Preloader";
 
-export default function ClientWrapper({
-  children,
-}: {
+// Tambahan Senior: Selalu deklarasikan interface untuk Props
+interface ClientWrapperProps {
   children: React.ReactNode;
-}) {
-  console.log("1. ClientWrapper dirender, state isLoading dibuat.");
-  const [isLoading, setIsLoading] = useState(true);
+}
 
+export default function ClientWrapper({ children }: ClientWrapperProps): React.JSX.Element {
+  console.log("1. ClientWrapper dirender, state isLoading dibypass menjadi false.");
+  
+  // 2. BYPASS LOGIC: Ubah nilai awal langsung ke 'false'
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  // 3. [COMMENTED] Matikan useEffect pengecek sessionStorage
+  /*
   useEffect(() => {
     console.log("2. useEffect berjalan (hanya di client, sekali).");
     const hasLoaded = sessionStorage.getItem("hasLoadedBefore");
@@ -31,6 +37,7 @@ export default function ClientWrapper({
       );
     }
   }, []);
+  */
 
   console.log("3. Sebelum return, nilai isLoading saat ini:", isLoading);
 
@@ -38,7 +45,8 @@ export default function ClientWrapper({
     <>
       <CustomCursor />
 
-      <AnimatePresence mode="wait">
+      {/* 4. [COMMENTED] Matikan eksekusi render JSX Preloader */}
+      {/* <AnimatePresence mode="wait">
         {isLoading && (
           <Preloader
             onAnimationComplete={() => {
@@ -54,6 +62,7 @@ export default function ClientWrapper({
           />
         )}
       </AnimatePresence>
+      */}
 
       {!isLoading && (
         <motion.div

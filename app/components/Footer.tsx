@@ -50,7 +50,7 @@ const Footer = () => {
             href="https://instagram.com/daffaharikhsan_"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 dark:text-gray-300 dark:hover:text-[#0554F2] hover:text-[#0554F2] transition-transform duration-300 hover:scale-150"
+            className="text-gray-800 dark:text-gray-300 dark:hover:text-[#0554F2] hover:text-[#0554F2] transition-transform duration-300 hover:scale-130"
           >
             <FaInstagram className="w-6 h-6 md:w-7 md:h-7" />
           </a>
@@ -58,7 +58,7 @@ const Footer = () => {
             href="https://linkedin.com/in/daffa-harikhsan-26sep04"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 dark:text-gray-300 dark:hover:text-[#0554F2] hover:text-[#0554F2] transition-transform duration-300 hover:scale-150"
+            className="text-gray-800 dark:text-gray-300 dark:hover:text-[#0554F2] hover:text-[#0554F2] transition-transform duration-300 hover:scale-130"
           >
             <FaLinkedin className="w-6 h-6 md:w-7 md:h-7" />
           </a>
@@ -66,7 +66,7 @@ const Footer = () => {
             href="https://github.com/daffaharikhsan"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-800 dark:text-gray-300 dark:hover:text-[#0554F2] hover:text-[#0554F2] transition-transform duration-300 hover:scale-150"
+            className="text-gray-800 dark:text-gray-300 dark:hover:text-[#0554F2] hover:text-[#0554F2] transition-transform duration-300 hover:scale-130"
           >
             <FaGithub className="w-6 h-6 md:w-7 md:h-7" />
           </a>

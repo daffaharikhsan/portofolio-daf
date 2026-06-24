@@ -70,6 +70,7 @@ const CustomCursor = () => {
     window.addEventListener("mousemove", handleMouseMove);
 
     // Cari semua elemen interaktif dan tambahkan event listener
+    /*
     const interactiveElements = document.querySelectorAll(
       'a, button, [role="button"], .interactive'
     );
@@ -77,13 +78,16 @@ const CustomCursor = () => {
       el.addEventListener("mouseenter", handleMouseEnter);
       el.addEventListener("mouseleave", handleMouseLeave);
     });
+    */
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
+      /*
       interactiveElements.forEach((el) => {
         el.removeEventListener("mouseenter", handleMouseEnter);
         el.removeEventListener("mouseleave", handleMouseLeave);
       });
+      */
     };
   }, [isTouchDevice]); // Tambahkan isTouchDevice sebagai dependensi
 
