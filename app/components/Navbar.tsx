@@ -201,7 +201,9 @@ const Navbar: React.FC = () => {
                         </a>
                       ) : (
                         <Link
-                          href={href}
+                          href="https://drive.google.com/drive/folders/1244VObg6Gu3XBwyXmmE2GOEF_UDYlu5c?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
                           onClick={toggleMenu}
                           className="flex justify-between items-center text-2xl text-gray-800 dark:text-gray-200 hover:text-black dark:hover:text-white font-medium py-2"
                         >
