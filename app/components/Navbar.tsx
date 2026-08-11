@@ -23,9 +23,9 @@ const Navbar: React.FC = () => {
   // 2. ARRAY MOBILE MENU (Comment objeknya untuk menyembunyikan dari laci Mobile)
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
-    // { href: "/project", label: "Project" },
-    // { href: "/certificates", label: "Certificates" },
-    // { href: "/About", label: "About" },
+     { href: "/project", label: "Project" },
+     { href: "/certificates", label: "Certificates" },
+     { href: "/About", label: "About" },
     { href: "/resume", label: "Resume" },
     { href: "/contact", label: "Contact" },
   ];
@@ -62,10 +62,10 @@ const Navbar: React.FC = () => {
               Home
             </Link>
 
-            {/* 3. MENU DESKTOP DI-COMMENT (Bungkus 3 elemen Link dengan tag JSX Comment) */}
-            {/* 
+            
+            
             <Link
-              href="/project"
+            href="/project"
               className={`transition-colors hover-underline ${
                 pathname === "/project"
                   ? "font-bold"
@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
             >
               About
             </Link>
-            */}
+            
 
             <Link
               href="https://drive.google.com/drive/folders/1244VObg6Gu3XBwyXmmE2GOEF_UDYlu5c?usp=drive_link"
