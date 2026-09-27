@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import "./globals.css";
 import "./fonts.css";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
-// import Preloader from "./components/Preloader"; // <-- 1. [COMMENTED] Matikan import
 import CustomCursor from "./components/CustomCursor";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -19,9 +18,6 @@ interface RootLayoutProps {
 export default function RootLayout({
   children,
 }: Readonly<RootLayoutProps>): React.JSX.Element {
-  // 3. BYPASS: Ubah default state langsung menjadi 'false'
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body className="font-sans" suppressHydrationWarning={true}>
@@ -34,26 +30,16 @@ export default function RootLayout({
         >
           <CustomCursor />
 
-          {/* 4. [COMMENTED] Matikan eksekusi komponen Preloader di level Root */}
-          {/* <AnimatePresence mode="wait">
-            {isLoading && (
-              <Preloader onAnimationComplete={() => setIsLoading(false)} />
-            )}
-          </AnimatePresence> */}
-
-          {/* Konten utama langsung terbuka bebas */}
-          {!isLoading && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="flex flex-col min-h-screen"
-            >
-              <Navbar />
-              {children}
-              <Footer />
-            </motion.div>
-          )}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col min-h-screen"
+          >
+            <Navbar />
+            {children}
+            <Footer />
+          </motion.div>
         </ThemeProvider>
       </body>
     </html>

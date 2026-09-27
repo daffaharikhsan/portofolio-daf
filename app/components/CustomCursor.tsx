@@ -6,7 +6,6 @@ import Image from "next/image";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: -100, y: -100 });
-  const [isHovering, setIsHovering] = useState(false);
   const [isTouchDevice, setIsTouchDevice] = useState(false);
   const [cursorSrc, setCursorSrc] = useState("/assets/cursor.svg");
 
@@ -62,32 +61,11 @@ const CustomCursor = () => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    // Fungsi untuk menangani hover
-    const handleMouseEnter = () => setIsHovering(true);
-    const handleMouseLeave = () => setIsHovering(false);
-
     // Tambahkan event listener untuk gerakan mouse
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Cari semua elemen interaktif dan tambahkan event listener
-    /*
-    const interactiveElements = document.querySelectorAll(
-      'a, button, [role="button"], .interactive'
-    );
-    interactiveElements.forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseEnter);
-      el.addEventListener("mouseleave", handleMouseLeave);
-    });
-    */
-
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      /*
-      interactiveElements.forEach((el) => {
-        el.removeEventListener("mouseenter", handleMouseEnter);
-        el.removeEventListener("mouseleave", handleMouseLeave);
-      });
-      */
     };
   }, [isTouchDevice]); // Tambahkan isTouchDevice sebagai dependensi
 
@@ -98,14 +76,12 @@ const CustomCursor = () => {
 
   return (
     <div
-      className={`custom-cursor hidden md:block ${isHovering ? "grow" : ""}`}
+      className="custom-cursor hidden md:block"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         // Offset agar kursor berada di tengah pointer mouse
-        transform: `translate(-50%, -50%) ${
-          isHovering ? "scale(2.5)" : "scale(1)"
-        }`,
+        transform: "translate(-50%, -50%) scale(1)",
       }}
     >
       {/* Ganti dengan komponen SVG Anda */}
